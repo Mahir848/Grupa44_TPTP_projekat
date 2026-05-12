@@ -31,4 +31,311 @@
     </div>
   </header>
 
+
+    <!-- ===== HERO ===== -->
+  <section class="hero" aria-label="Hero sekcija">
+    <div class="hero-pozadina" aria-hidden="true">
+      <span class="hero-nota n1">♩</span>
+      <span class="hero-nota n2">♪</span>
+      <span class="hero-nota n3">♫</span>
+      <span class="hero-nota n4">♬</span>
+      <span class="hero-nota n5">♭</span>
+      <span class="hero-nota n6">♯</span>
+    </div>
+    <div class="hero-sadrzaj">
+      <p class="hero-tag">Enciklopedija rock &amp; pop muzike</p>
+      <h1 class="hero-naslov">SOUND<br /><em>ARCHIVE</em></h1>
+      <p class="hero-podnaslov">Katalog legendarnih muzičkih bendova — historija, diskografija i nasljeđe koje traje.</p>
+      <div class="hero-dugmad">
+        <a href="sadrzaj.html" class="btn-primarni">Istraži bendove →</a>
+        <a href="kontakt.html" class="btn-sekundarni">Predloži bend</a>
+      </div>
+    </div>
+    <div class="hero-linija" aria-hidden="true"></div>
+  </section>
+
+  <!-- ===== GLAVNI SADRŽAJ ===== -->
+  <div class="glavni-sadrzaj">
+
+    <!-- ===== SIDEBAR NAVIGACIJA ===== -->
+    <nav class="sekundarna-nav" aria-label="Filtriranje po žanru">
+      <h3>Žanrovi</h3>
+      <ul>
+        
+      <!-- Data-filter atributi se koriste za JavaScript filtriranje kartica bez ponovnog učitavanja stranice. -->
+
+        <li><button class="filter-btn aktivan-filter" data-filter="sve">Sve</button></li>
+        <li><button class="filter-btn" data-filter="classic-rock">Classic Rock</button></li>
+        <li><button class="filter-btn" data-filter="grunge">Grunge</button></li>
+        <li><button class="filter-btn" data-filter="metal">Metal</button></li>
+        <li><button class="filter-btn" data-filter="pop-rock">Pop Rock</button></li>
+        <li><button class="filter-btn" data-filter="alternative">Alternative</button></li>
+      </ul>
+
+      <div class="statistika-box">
+        <h4>Arhiva</h4>
+        <div class="stat-brojac" id="bendova-broj">6</div>
+        <p class="stat-label">legendarnih bendova</p>
+        <div class="stat-item">
+          <span id="albuma-broj">47</span>
+          <small>studijskih albuma</small>
+        </div>
+        <div class="stat-item">
+          <span id="godina-broj">1960</span>
+          <small>od godine</small>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ===== MAIN – KARTICE BENDOVA ===== -->
+    <main class="main-sadrzaj" aria-label="Katalog bendova">
+      <div class="kartice-zaglavlje">
+        <h2>Legendarne grupe</h2>
+        <p id="broj-prikazanih">Prikazuje se <span id="broj">6</span> bendova</p>
+      </div>
+
+      <div class="kartice-grid" id="kartice-grid">
+
+        <!-- Kartica 1 – Queen -->
+        <article class="kartica" data-kategorija="classic-rock">
+          <div class="kartica-slika">
+            <img src="images/queen.jpg" alt="Queen – Freddie Mercury, Brian May, Roger Taylor, John Deacon" loading="lazy" />
+            <span class="kartica-badge">Legenda</span>
+          </div>
+          <div class="kartica-info">
+            <span class="kartica-kategorija">Classic Rock</span>
+            <h3>Queen</h3>
+            <p>Britansko rock čudo iz Londona. Od stadionskih himni do operske drame, Queen je redefinisao granice popularne muzike.</p>
+            <div class="kartica-meta">
+              <span>🗓 1970 – 1991</span>
+              <span>📀 15 albuma</span>
+            </div>
+            <div class="kartica-footer">
+              <a href="sadrzaj.html#queen" class="btn-kartica">Detalji →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Kartica 2 – Nirvana -->
+        <article class="kartica" data-kategorija="grunge">
+          <div class="kartica-slika">
+            <img src="images/nirvana.jpg" alt="Nirvana – Kurt Cobain, Krist Novoselic, Dave Grohl" loading="lazy" />
+            <span class="kartica-badge badge-novo">Grunge ikona</span>
+          </div>
+          <div class="kartica-info">
+            <span class="kartica-kategorija">Grunge</span>
+            <h3>Nirvana</h3>
+            <p>Iz Aberdeena u Seattle, a zatim cijeli svijet. Nirvana je donijela grunge mainstream i zauvijek promijenila rock scenu.</p>
+            <div class="kartica-meta">
+              <span>🗓 1987 – 1994</span>
+              <span>📀 3 albuma</span>
+            </div>
+            <div class="kartica-footer">
+              <a href="sadrzaj.html#nirvana" class="btn-kartica">Detalji →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Kartica 3 – Led Zeppelin -->
+        <article class="kartica" data-kategorija="classic-rock">
+          <div class="kartica-slika">
+            <img src="images/ledzeppelin.jpg" alt="Led Zeppelin – Jimmy Page, Robert Plant, John Paul Jones, John Bonham" loading="lazy" />
+            <span class="kartica-badge">Legenda</span>
+          </div>
+          <div class="kartica-info">
+            <span class="kartica-kategorija">Classic Rock</span>
+            <h3>Led Zeppelin</h3>
+            <p>Utemeljitelji hard rocka i heavy metala. Njihov zvuk — kombinacija bluesa, folka i sirovog rocka — neponovljiv je i danas.</p>
+            <div class="kartica-meta">
+              <span>🗓 1968 – 1980</span>
+              <span>📀 9 albuma</span>
+            </div>
+            <div class="kartica-footer">
+              <a href="sadrzaj.html#ledzeppelin" class="btn-kartica">Detalji →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Kartica 4 – Metallica -->
+        <article class="kartica" data-kategorija="metal">
+          <div class="kartica-slika">
+            <img src="images/metallica.jpg" alt="Metallica – James Hetfield, Lars Ulrich, Kirk Hammett, Robert Trujillo" loading="lazy" />
+            <span class="kartica-badge badge-novo">Bestseller</span>
+          </div>
+          <div class="kartica-info">
+            <span class="kartica-kategorija">Metal</span>
+            <h3>Metallica</h3>
+            <p>Pioniri thrash metala koji su postali globalni fenomen. Od Kill 'Em All do Black Albuma — karijera bez premca.</p>
+            <div class="kartica-meta">
+              <span>🗓 1981 – danas</span>
+              <span>📀 11 albuma</span>
+            </div>
+            <div class="kartica-footer">
+              <a href="sadrzaj.html#metallica" class="btn-kartica">Detalji →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Kartica 5 – Fleetwood Mac -->
+        <article class="kartica" data-kategorija="pop-rock">
+          <div class="kartica-slika">
+            <img src="images/fleetwood.jpg" alt="Fleetwood Mac – Stevie Nicks, Lindsey Buckingham, Christine McVie" loading="lazy" />
+          </div>
+          <div class="kartica-info">
+            <span class="kartica-kategorija">Pop Rock</span>
+            <h3>Fleetwood Mac</h3>
+            <p>Emotivne harmonije i karakteristični gitarski zvuk. Rumours iz 1977. ostaje jedan od najprodavanijih albuma ikad.</p>
+            <div class="kartica-meta">
+              <span>🗓 1967 – 2019</span>
+              <span>📀 18 albuma</span>
+            </div>
+            <div class="kartica-footer">
+              <a href="sadrzaj.html#fleetwood" class="btn-kartica">Detalji →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Kartica 6 – Radiohead -->
+        <article class="kartica" data-kategorija="alternative">
+          <div class="kartica-slika">
+            <img src="images/radiohead.jpg" alt="Radiohead – Thom Yorke, Jonny Greenwood, Ed O'Brien" loading="lazy" />
+            <span class="kartica-badge badge-novo">Art Rock</span>
+          </div>
+          <div class="kartica-info">
+            <span class="kartica-kategorija">Alternative</span>
+            <h3>Radiohead</h3>
+            <p>Eksperimentalni art rock iz Oxforda. OK Computer i Kid A redefinisali su alternativni rock i elektronsku muziku.</p>
+            <div class="kartica-meta">
+              <span>🗓 1985 – danas</span>
+              <span>📀 9 albuma</span>
+            </div>
+            <div class="kartica-footer">
+              <a href="sadrzaj.html#radiohead" class="btn-kartica">Detalji →</a>
+            </div>
+          </div>
+        </article>
+
+      </div><!-- /kartice-grid -->
+
+      <p id="nema-rezultata" style="display:none; text-align:center; padding:40px;">
+        Nema bendova u ovom žanru.
+      </p>
+    </main>
+
+        <!-- ===== ASIDE – YouTube + Zanimljivosti ===== -->
+    <aside class="bocna-sekcija" aria-label="Video i zanimljivosti">
+      <div class="aside-blok">
+        <h3>♬ Live Aid – Queen 1985</h3>
+        <p>Jedan od najpamtljivijih nastupa u historiji rocka. Wembley stadion, 72.000 posjetilaca.</p>
+        <div class="video-wrapper">
+          <!-- YouTube iframe embed sam prilagodio uz pomoć ChatGPT-a. Razumijem da /embed/ link omogućava prikaz videa direktno unutar stranice. -->
+          <iframe
+            src="https://www.youtube.com/embed/frdBb9Slu1A?si=PUJbZZILxRZfVqPY"
+            title="Queen – Live Aid Wembley 1985"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    
+      <div class="aside-blok">
+        <h3>Znaš li ovo?</h3>
+        <ul class="zanimljivosti-lista">
+          <li>🎸 Bohemian Rhapsody je snimljena u samo 3 sedmice</li>
+          <li>🥁 Dave Grohl je bio bubnjar Nirvane prije Foo Fighters</li>
+          <li>🎵 Led Zeppelin nikad nije objavio singl u UK</li>
+          <li>🤘 Metallica je jedini bend koji je nastupao na svih 7 kontinenata</li>
+          <li>🌙 Stevie Nicks je jedina žena u Rock &amp; Roll Hall of Fame dva puta</li>
+        </ul>
+      </div>
+
+      <div class="aside-blok">
+        <h3>Žanr mapa</h3>
+        <div class="zanr-timeline">
+          <div class="zanr-item" style="--y:1960">
+            <span class="zanr-god">1960s</span>
+            <span class="zanr-naziv">Classic Rock rađanje</span>
+          </div>
+          <div class="zanr-item" style="--y:1970">
+            <span class="zanr-god">1970s</span>
+            <span class="zanr-naziv">Hard Rock &amp; Metal</span>
+          </div>
+          <div class="zanr-item" style="--y:1980">
+            <span class="zanr-god">1980s</span>
+            <span class="zanr-naziv">Thrash Metal &amp; Pop Rock</span>
+          </div>
+          <div class="zanr-item" style="--y:1990">
+            <span class="zanr-god">1990s</span>
+            <span class="zanr-naziv">Grunge &amp; Alternative</span>
+          </div>
+          <div class="zanr-item" style="--y:2000">
+            <span class="zanr-god">2000s</span>
+            <span class="zanr-naziv">Art Rock &amp; Indie</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+  </div><!-- /glavni-sadrzaj -->
+
+  <!-- ===== AUTORI ===== -->
+    <section class="autori-sekcija" aria-label="Tim projekta">
+      <h2>Tim projekta</h2>
+      <div class="autori-grid">
+        <div class="autor-kartica">
+          <div class="autor-avatar">
+            <img src="images/mahirsuljkanovic.jpg" alt="Mahir Suljkanović">
+          </div>
+          <h4>Mahir Suljkanović</h4>
+          <span>HTML struktura</span>
+        </div>
+
+        <div class="autor-kartica">
+          <div class="autor-avatar">
+            <img src="images/leoandric.jpg" alt="Leo Andrić">
+          </div>
+          <h4>Leo Andrić</h4>
+          <span>CSS dizajn</span>
+        </div>
+
+        <div class="autor-kartica">
+          <div class="autor-avatar">
+            <img src="images/lejlasoftic.jpg" alt="Lejla Softić">
+          </div>
+          <h4>Lejla Softić</h4>
+          <span>JavaScript logika</span>
+        </div>
+      </div>
+    </section>
+  <!-- ===== FOOTER ===== -->
+  <footer class="podnozje" id="podnozje">
+    <div class="podnozje-sadrzaj">
+      <div class="podnozje-logo">
+        <span class="logo-ikona">♩</span>
+        <span class="logo-tekst">Sound<em>Archive</em></span>
+        <p>Every riff tells a story.</p>
+      </div>
+      <nav class="podnozje-nav" aria-label="Footer navigacija">
+        <h4>Navigacija</h4>
+        <ul>
+          <li><a href="index.html">Početna</a></li>
+          <li><a href="sadrzaj.html">Bendovi</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav>
+      <div class="podnozje-autori">
+        <h4>Autori</h4>
+        <p>Mahir Suljkanović</p>
+        <p>Leo Andrić</p>
+        <p>Lejla Softić</p>
+      </div>
+    </div>
+    <div class="podnozje-bottom">
+      <p>© 2026 SoundArchive. Sva prava zadržana. | TPTP Projekat – Akademska godina 2025/2026</p>
+    </div>
+  </footer>
+
+  <script src="js/tptpskripte.js"></script>
 </body>
+</html>
