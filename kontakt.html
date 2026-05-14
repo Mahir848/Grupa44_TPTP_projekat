@@ -29,6 +29,292 @@
     </div>
   </header>
 
+  
+  <!-- ===== HEADER ===== -->
+  <header class="zaglavlje" id="vrh">
+    <div class="logo">
+      <a href="01_index.html">
+        <span class="logo-ikona">♩</span>
+        <span class="logo-tekst">Sound<em>Archive</em></span>
+      </a>
+    </div>
+    <nav class="glavni-meni" aria-label="Glavna navigacija">
+      <ul>
+        <li><a href="01_index.html">Početna</a></li>
+        <li><a href="02_sadrzaj.html">Bendovi</a></li>
+        <li><a href="03_kontakt.html" class="aktivan">Kontakt</a></li>
+      </ul>
+    </nav>
+    <div class="zaglavlje-desno">
+      <button id="dark-mode-toggle" aria-label="Prebaci tamni/svjetli mod">◑ Tema</button>
+    </div>
+  </header>
+
+  <!-- ===== KONTAKT HERO ===== -->
+  <section class="kontakt-hero" aria-label="Kontakt naslov">
+    <div class="kontakt-hero-pozadina" aria-hidden="true">
+      <span class="hero-nota n1">♩</span>
+      <span class="hero-nota n2">♪</span>
+      <span class="hero-nota n3">♫</span>
+      <span class="hero-nota n4">♬</span>
+    </div>
+    <div class="kontakt-hero-sadrzaj">
+      <p class="hero-tag">Povratna informacija i sugestije</p>
+      <h1>Kontaktirajte nas</h1>
+      <p>Imate prijedlog za novi bend? Pronašli ste grešku? Javite nam se!</p>
+    </div>
+  </section>
+
+  <!-- ===== MAIN ===== -->
+  <main class="kontakt-main" aria-label="Kontakt stranica">
+    <div class="kontakt-sadrzaj">
+
+      <!-- ===== INFO PANEL ===== -->
+      <aside class="kontakt-info" aria-label="Informacije o kontaktu">
+
+        <!-- Mailto link sam dodao uz pomoć ChatGPT-a. Razumijem da mailto: otvara korisnikov zadani e-mail program i automatski priprema poruku na navedenu adresu. -->
+        <div class="info-blok">
+          <h3>📬 E-mail</h3>
+          <a href="mailto:info@soundarchive.ba">info@soundarchive.ba</a><br />
+          <a href="mailto:sugestije@soundarchive.ba">sugestije@soundarchive.ba</a>
+        </div>
+
+        <div class="info-blok">
+          <h3>📍 Adresa</h3>
+          <p>Muzička akademija</p>
+          <p>Franjevačka 2</p>
+          <p>75000 Tuzla</p>
+          <p>Bosna i Hercegovina</p>
+        </div>
+
+        <div class="info-blok">
+          <h3>🕐 Odgovaramo</h3>
+          <p>Pon – Pet: 09:00 – 17:00</p>
+          <p>Vikend: Zatvoren</p>
+          <p><small>Obično u roku od 24–48h</small></p>
+        </div>
+
+        <div class="info-blok o-nama-blok">
+          <h3>O projektu</h3>
+          <p>
+            SoundArchive je studentski projekat iz predmeta Tehnologije za podršku tehničkom pisanju (TPTP), Akademska godina 2025/2026.
+          </p>
+          <p>
+            Cilj nam je kreirati sveobuhvatan, tačan i estetski ugodan katalog legendarnih muzičkih bendova koji će poslužiti kao referentni izvor za ljubitelje rock muzike.
+          </p>
+        </div>
+
+        <div class="info-blok">
+          <h3>🎸 Predloži bend</h3>
+          <p>Misliš da nedostaje neki legendarni bend? Popuni formu i predloži ga — svaka sugestija se razmatra!</p>
+        </div>
+
+      </aside>
+
+      <!-- ===== FORMA ===== -->
+      <section class="kontakt-forma-sekcija" aria-label="Kontakt forma">
+        <h2>Pošaljite nam poruku</h2>
+        <p>Popunite sva obavezna polja i javit ćemo vam se u roku od 48 sati.</p>
+
+        <!-- Poruka o uspjehu (skrivena na početku, prikazuje se JS-om) -->
+        <div id="uspjesna-poruka" class="uspjesna-poruka" style="display:none;" role="alert" aria-live="polite">
+          <span class="uspjesna-ikona">✅</span>
+          <p id="uspjesna-tekst"></p>
+        </div>
+
+        <div class="forma-wrapper">
+
+          <!-- 1. TEXT – IME -->
+          <div class="forma-polje">
+            <label for="ime">Ime <span class="obavezno">*</span></label>
+            <input
+              type="text"
+              id="ime"
+              name="ime"
+              placeholder="Vaše ime..."
+              autocomplete="given-name"
+            />
+            <span class="greska-poruka" id="ime-greska" role="alert"></span>
+          </div>
+
+          <!-- 2. TEXT – PREZIME -->
+          <div class="forma-polje">
+            <label for="prezime">Prezime <span class="obavezno">*</span></label>
+            <input
+              type="text"
+              id="prezime"
+              name="prezime"
+              placeholder="Vaše prezime..."
+              autocomplete="family-name"
+            />
+            <span class="greska-poruka" id="prezime-greska" role="alert"></span>
+          </div>
+
+          <!-- 3. EMAIL -->
+          <div class="forma-polje">
+            <label for="email">E-mail adresa <span class="obavezno">*</span></label>
+            <input
+              type="text"
+              id="email"
+              name="email"
+              placeholder="ime.prezime@mail.com"
+              autocomplete="email"
+            />
+            <span class="greska-poruka" id="email-greska" role="alert"></span>
+          </div>
+
+          <!-- 4. TEXT – NAZIV BENDA  -->
+          <div class="forma-polje">
+            <label for="predlozeni-bend">Predloženi bend <span class="obavezno">*</span></label>
+            <input
+              type="text"
+              id="predlozeni-bend"
+              name="predlozeni-bend"
+              placeholder="npr. The Beatles, Pink Floyd..."
+            />
+            <span class="greska-poruka" id="bend-greska" role="alert"></span>
+          </div>
+
+          <!-- 5. SELECT – TEMA UPITA -->
+          <div class="forma-polje">
+            <label for="tema">Tema upita <span class="obavezno">*</span></label>
+            <select id="tema" name="tema">
+              <option value="">– Odaberite temu –</option>
+              <option value="prijedlog-benda">Prijedlog novog benda</option>
+              <option value="ispravka">Ispravka podataka</option>
+              <option value="diskografija">Dopuna diskografije</option>
+              <option value="fotografija">Problem s fotografijom</option>
+              <option value="saradnja">Prijedlog saradnje</option>
+              <option value="ostalo">Ostalo</option>
+            </select>
+            <span class="greska-poruka" id="tema-greska" role="alert"></span>
+          </div>
+
+          <!-- 6. SELECT – OMILJENI ŽANR -->
+          <div class="forma-polje">
+            <label for="zanr">Vaš omiljeni žanr</label>
+            <select id="zanr" name="zanr">
+              <option value="">– Odaberite žanr –</option>
+              <option value="classic-rock">Classic Rock</option>
+              <option value="grunge">Grunge</option>
+              <option value="metal">Metal / Thrash Metal</option>
+              <option value="pop-rock">Pop Rock</option>
+              <option value="alternative">Alternative / Indie</option>
+              <option value="blues">Blues Rock</option>
+              <option value="progressive">Progressive Rock</option>
+              <option value="punk">Punk Rock</option>
+            </select>
+          </div>
+
+          <!-- 7. RADIO BUTTONS – KAKO STE NAS PRONAŠLI -->
+          <div class="forma-polje forma-polje-full">
+            <fieldset class="radio-fieldset">
+              <legend>Kako ste pronašli SoundArchive? <span class="obavezno">*</span></legend>
+              <div class="radio-grupa">
+                <label class="radio-label">
+                  <input type="radio" name="izvor" value="drustvene-mreze" />
+                  <span class="radio-custom"></span>
+                  Društvene mreže
+                </label>
+                <label class="radio-label">
+                  <input type="radio" name="izvor" value="pretraga" />
+                  <span class="radio-custom"></span>
+                  Web pretraga (Google, Bing...)
+                </label>
+                <label class="radio-label">
+                  <input type="radio" name="izvor" value="preporuka" />
+                  <span class="radio-custom"></span>
+                  Preporuka prijatelja
+                </label>
+                <label class="radio-label">
+                  <input type="radio" name="izvor" value="fakultet" />
+                  <span class="radio-custom"></span>
+                  Putem fakulteta / škole
+                </label>
+                <label class="radio-label">
+                  <input type="radio" name="izvor" value="ostalo-radio" />
+                  <span class="radio-custom"></span>
+                  Ostalo
+                </label>
+              </div>
+              <span class="greska-poruka" id="izvor-greska" role="alert"></span>
+            </fieldset>
+          </div>
+
+          <!-- 8. CHECKBOXES – OBLASTI INTERESOVANJA -->
+          <div class="forma-polje forma-polje-full">
+            <fieldset class="checkbox-fieldset">
+              <legend>Šta vas zanima na SoundArchive? <small>(možete odabrati više opcija)</small></legend>
+              <div class="checkbox-grupa">
+                <label class="checkbox-label">
+                  <input type="checkbox" name="interesi" value="diskografija" />
+                  <span class="checkbox-custom"></span>
+                  Diskografija i albumi
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="interesi" value="historija" />
+                  <span class="checkbox-custom"></span>
+                  Historija bendova
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="interesi" value="clanovi" />
+                  <span class="checkbox-custom"></span>
+                  Biografije članova
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="interesi" value="live-nastupi" />
+                  <span class="checkbox-custom"></span>
+                  Live nastupi i koncerti
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="interesi" value="instrumenti" />
+                  <span class="checkbox-custom"></span>
+                  Instrumenti i oprema
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="interesi" value="novosti" />
+                  <span class="checkbox-custom"></span>
+                  Novosti i aktuelnosti
+                </label>
+              </div>
+            </fieldset>
+          </div>
+
+          <!-- 9. TEXTAREA – PORUKA -->
+          <div class="forma-polje forma-polje-full">
+            <label for="poruka">Poruka <span class="obavezno">*</span></label>
+            <textarea
+              id="poruka"
+              name="poruka"
+              placeholder="Napišite vašu poruku (minimum 20 znakova)..."
+              rows="6"
+            ></textarea>
+            <span class="greska-poruka" id="poruka-greska" role="alert"></span>
+            <small id="poruka-brojac" class="poruka-brojac">0 / 20 znakova minimalno</small>
+          </div>
+
+          <!-- 10. CHECKBOX – SAGLASNOST (GDPR) -->
+          <div class="forma-polje forma-polje-full">
+            <label class="checkbox-label saglasnost-label">
+              <input type="checkbox" id="saglasnost" name="saglasnost" value="da" />
+              <span class="checkbox-custom"></span>
+              Slažem se da se moji podaci koriste isključivo u svrhu odgovora na upit. <span class="obavezno">*</span>
+            </label>
+            <span class="greska-poruka" id="saglasnost-greska" role="alert"></span>
+          </div>
+
+          <!-- DUGMAD -->
+          <div class="forma-dugmad">
+            <button type="button" id="btn-posalji" class="btn-primarni">Pošalji poruku ↗</button>
+            <button type="button" id="btn-reset" class="btn-sekundarni">Poništi unos</button>
+          </div>
+
+        </div><!-- /forma-wrapper -->
+      </section>
+
+    </div><!-- /kontakt-sadrzaj -->
+  </main>
+
   <!-- ===== FOOTER ===== -->
   <footer class="podnozje" id="podnozje">
     <div class="podnozje-sadrzaj">
