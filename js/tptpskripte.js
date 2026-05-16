@@ -555,13 +555,3 @@ skokDugmad.forEach((dugme) => {
         });
     });
 });
-
-
-/* =========================================================
-   KONZOLNA PORUKA
-   ========================================================= */
-
-console.log(
-    "%cSoundArchive učitan uspješno.",
-    "color: #ffcc70; font-size: 16px; font-weight: bold;"
-);
