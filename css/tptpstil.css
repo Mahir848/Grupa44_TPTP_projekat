@@ -118,7 +118,7 @@
   }
 }
 
-/*--sekcija hero ---*/
+/*--sekcija hero ---*/ /*==Uvom dijelu koda mi je Ai tool gemini provjerio i debugovao kod zasekciju hero.Time sam saznao kako isparvo kodirati div class hero koju sma u daljnem toku primjenio.Također mi je preporućjo ubacitit custom font koji sam ja učino.Izabrao sam  gogle font oswald radi toga sto uzima inspiraciju iz starijeg historicnog fonta Alternate Gothic. */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Oswald:wght@500;700&display=swap');
 
@@ -171,7 +171,7 @@
   z-index: 1;
 }
 
-/* --- DEFINICIJA ANIMACIJA ZA TEKST --- */
+/* ---  ANIMACIJA ZA TEKST --- */
 .hero-tag,
 .hero-naslov,
 .hero-podnaslov,
