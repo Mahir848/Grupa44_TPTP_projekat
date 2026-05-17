@@ -2,10 +2,10 @@
 
 /*----pocetna stranca----*/
 
- /* --- zaglavlje --- */
+* --- zaglavlje  --- */
 .zaglavlje {
   display: flex;
-  flex-wrap: wrap; / 
+  flex-wrap: wrap; 
   justify-content: space-between;
   align-items: center;
   padding: 1rem 5%;
@@ -15,7 +15,7 @@
   top: 0;
   z-index: 1000;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  gap: 1rem 0; / 
+  gap: 1rem 0;
 }
 
 /* --- Prvi red--- */
@@ -24,7 +24,7 @@
 }
 
 .zaglavlje-desno {
-  order: 2; 
+  order: 2;
 }
 
 /* --- Drugi red --- */
@@ -33,7 +33,7 @@
   width: 100%; 
   display: flex;
   justify-content: center; 
-  border-top: 1px solid #f1f2f6; 
+  border-top: 1px solid #f1f2f6;
   padding-top: 0.8rem;
 }
 
@@ -114,11 +114,11 @@
 /* --- Responzivnost za mobilne ekrane --- */
 @media (max-width: 480px) {
   .glavni-meni ul {
-    gap: 1.5rem;  
+    gap: 1.5rem;
   }
 }
 
-/*--sekcija hero---*/
+/*--sekcija hero ---*/
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Oswald:wght@500;700&display=swap');
 
@@ -129,7 +129,7 @@
   align-items: center; 
   justify-content: center; 
   text-align: center;
-  background-color: #05050a; 
+  background-color: #05050a;
   color: #ffffff; 
   overflow: hidden; 
   padding: 60px 20px;
@@ -146,11 +146,10 @@
   background: linear-gradient(rgba(5, 5, 10, 0.7), rgba(5, 5, 10, 0.85)), url('images/hero4.jpg'); 
   background-repeat: no-repeat; 
   background-position: center; 
-  background-size: cover; 
+  background-size: cover;
   filter: blur(1px); 
   z-index: -1; 
-  
-  animation: zoomInBg 2s ease-out forwards;
+  animation: zoomInBg 3s ease-out forwards; 
 }
 
 .hero-pozadina,
@@ -169,40 +168,25 @@
   position: relative;
   max-width: 800px; 
   font-family: 'Inter', sans-serif; 
-  z-index: 1; 
+  z-index: 1;
 }
 
 /* --- DEFINICIJA ANIMACIJA ZA TEKST --- */
-
-/* Zajednička klasa za elemente koji se animiraju */
 .hero-tag,
 .hero-naslov,
 .hero-podnaslov,
 .hero-dugmad {
-  opacity: 0; 
+  opacity: 0;
   transform: translateY(20px); 
   animation: pokaziTekst 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 
-/* Delay */
-.hero-tag {
-  animation-delay: 0.2s;
-}
-
-.hero-naslov {
-  animation-delay: 0.4s;
-}
-
-.hero-podnaslov {
-  animation-delay: 0.6s;
-}
-
-.hero-dugmad {
-  animation-delay: 0.8s;
-}
+.hero-tag { animation-delay: 0.2s; }
+.hero-naslov { animation-delay: 0.4s; }
+.hero-podnaslov { animation-delay: 0.6s; }
+.hero-dugmad { animation-delay: 0.8s; }
 
 /* --- STIL ZA TEKST --- */
-
 .hero-tag {
   font-size: 0.9rem;
   text-transform: uppercase;
@@ -220,6 +204,7 @@
   letter-spacing: 1px;
   margin-bottom: 20px;
   color: #ffffff;
+  text-shadow: 0 4px 10px rgba(0,0,0,0.3); 
 }
 
 .hero-naslov em {
@@ -250,6 +235,7 @@
   font-weight: 600;
   text-decoration: none;
   transition: all 0.3s ease;
+  border: 2px solid transparent;
 }
 
 .btn-primarni {
@@ -257,14 +243,25 @@
   color: white;
 }
 
+.btn-sekundarni {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
 .btn-primarni:hover {
-  background-color: #e02253;
+  background-color: #3b3bff; 
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(255, 51, 102, 0.4); 
+  box-shadow: 0 5px 15px rgba(77, 77, 255, 0.4); 
+}
+
+.btn-sekundarni:hover {
+  background-color: white;
+  color: #05050a;
+  transform: translateY(-2px);
 }
 
 /* --- KEYFRAMES --- */
-
 @keyframes pokaziTekst {
   to {
     opacity: 1;
@@ -272,66 +269,69 @@
   }
 }
 
-/* Efekat za pozadinsku sliku  */
 @keyframes zoomInBg {
-  from {
-    transform: scale(1.05);
-  }
-  to {
-    transform: scale(1);
-  }
+  from { transform: scale(1.05); }
+  to { transform: scale(1); }
 }
 
-/*---Sekcija Mian---*/
+/*---Sekcija Main (Optimizirano) ---*/
 
- /*---GLAVNA RASPODJELA ---*/
-
-/* Desktop ekrani (širi od 1024px) */
+/* Desktop ekrani */
 @media (min-width: 1024px) {
   div.glavni-sadrzaj {
     display: grid;
     grid-template-columns: 250px 1fr 300px;
-    column-gap: 2rem;
-    padding: 2rem;
-    align-items: start; 
+    column-gap: 2.5rem;
+    padding: 3rem 2rem; /* Više prostora oko rubova */
+    max-width: 1400px;
+    margin: 0 auto;
+    align-items: start;
   }
 }
 
-/*  Tableti (između 768px i 1023px) */
+/* Tableti */
 @media (min-width: 768px) and (max-width: 1023px) {
   div.glavni-sadrzaj {
     display: grid;
     grid-template-columns: 240px 1fr;
     gap: 2rem;
-    padding: 1.5rem;
+    padding: 2rem;
   }
   .bocna-sekcija {
-    grid-column: span 2; 
+    grid-column: span 2;
   }
 }
 
-/* Mobilni uređaji (ispod 768px)  */
+/* Mobilni uređaji */
 @media (max-width: 767px) {
   div.glavni-sadrzaj {
     display: grid;
     grid-template-columns: 1fr;
     row-gap: 2rem;
-    padding: 1rem;
+    padding: 1.5rem;
   }
 }
 
 /* --- SIDEBAR I ASIDE ---*/
 .sekundarna-nav, .aside-blok {
-  background: #f8f9fa;
+  background: #ffffff;
   padding: 1.5rem;
-  border-radius: 8px;
+  border-radius: 12px; 
   border: 1px solid #eef2f5;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.03); 
+}
+
+.sekundarna-nav h3, .aside-blok h3 {
+  margin-top: 0;
+  color: #2f3542;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
 }
 
 .sekundarna-nav ul {
   list-style: none;
   padding: 0;
-  margin: 1rem 0;
+  margin: 1.5rem 0;
 }
 
 .sekundarna-nav li {
@@ -341,68 +341,100 @@
 .filter-btn {
   width: 100%;
   text-align: left;
-  padding: 0.5rem;
+  padding: 0.75rem 1rem;
   border: none;
-  background: transparent;
+  background: #f8f9fa;
+  border-radius: 8px;
   cursor: pointer;
+  transition: all 0.3s ease;
+  color: #57606f;
+  font-weight: 500;
+}
+
+.filter-btn:hover {
+  background: #edf0f5;
+  color: #4d4dff;
+  transform: translateX(4px); /* Efekt blagog pomjeranja */
 }
 
 .aktivan-filter {
   font-weight: bold;
-  color: #007bff;
+  color: #ffffff !important;
+  background-color: #4d4dff !important;
 }
 
 .statistika-box {
   margin-top: 2rem;
-  border-top: 1px solid #ddd;
-  padding-top: 1rem;
+  border-top: 1px solid #eef2f5;
+  padding-top: 1.5rem;
 }
 
 /* ---GRID ZA KARTICE BENDOVA --- */
+.kartice-zaglavlje h2 {
+  font-family: 'Oswald', sans-serif;
+  color: #2f3542;
+  margin-top: 0;
+}
+
 .kartice-grid {
   display: grid;
-   
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* auto-fill za bolji raspored */
+  gap: 2rem; /* Malo veći razmak između kartica */
   margin-top: 1.5rem;
 }
 
 /* --- KARTICE BENDOVA --- */
 .kartica {
   background: white;
-  border-radius: 8px;
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
   border: 1px solid #eef2f5;
   display: flex;
   flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Dodata tranzicija */
+}
+
+/* Elegantni hover efekat za karticu */
+.kartica:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
 }
 
 .kartica-slika {
   position: relative;
-  height: 200px;
+  height: 220px; /* Malo viša slika */
+  overflow: hidden; /* Ograničava zumiranje unutar kontejnera */
 }
 
 .kartica-slika img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.5s ease; /* Tranzicija za zum slike */
+}
+
+.kartica:hover .kartica-slika img {
+  transform: scale(1.08); /* Slika se blago uveća pri prelasku mišem */
 }
 
 .kartica-badge {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 12px;
+  right: 12px;
   background: #ff4757;
   color: white;
-  padding: 0.25rem 0.75rem;
-  font-size: 0.8rem;
-  border-radius: 4px;
+  padding: 0.3rem 0.8rem;
+  font-size: 0.75rem;
+  border-radius: 20px;
   font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 5px rgba(255, 71, 87, 0.4);
 }
 
 .kartica-info {
-  padding: 1.25rem;
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -410,23 +442,32 @@
 
 .kartica-kategorija {
   font-size: 0.8rem;
-  color: #888;
+  color: #4d4dff;
   text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 
 .kartica h3 {
-  margin: 0.5rem 0;
-  font-size: 1.4rem;
+  margin: 0.75rem 0;
+  font-size: 1.5rem;
+  color: #2f3542;
+}
+
+.kartica p {
+  color: #57606f;
+  line-height: 1.5;
+  font-size: 0.95rem;
 }
 
 .kartica-meta {
   display: flex;
   justify-content: space-between;
   font-size: 0.85rem;
-  color: #555;
-  margin: 1rem 0;
-  padding-top: 0.5rem;
-  border-top: 1px dashed #eee;
+  color: #747d8c;
+  margin: 1.25rem 0;
+  padding-top: 1rem;
+  border-top: 1px solid #f1f2f6;
 }
 
 .kartica-footer {
@@ -437,19 +478,21 @@
   display: inline-block;
   width: 100%;
   text-align: center;
-  padding: 0.6rem;
-  background: #007bff;
-  color: white;
+  padding: 0.8rem;
+  background: #f1f2f6;
+  color: #2f3542;
+  font-weight: 600;
   text-decoration: none;
-  border-radius: 4px;
-  transition: background 0.2s;
+  border-radius: 8px;
+  transition: all 0.3s ease;
 }
 
 .btn-kartica:hover {
-  background: #0056b3;
+  background: #4d4dff;
+  color: white;
 }
 
-/* --- RESPONSIVIVIDEO I TIMELINE ---*/
+/* --- RESPONSIVNI VIDEO I TIMELINE ---*/
 .bocna-sekcija {
   display: flex;
   flex-direction: column;
@@ -462,7 +505,8 @@
   height: 0;
   overflow: hidden;
   margin-top: 1rem;
-  border-radius: 4px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .video-wrapper iframe {
@@ -476,44 +520,51 @@
 .zanimljivosti-lista {
   padding-left: 1.2rem;
   margin: 1rem 0 0 0;
+  color: #57606f;
 }
 
 .zanimljivosti-lista li {
   margin-bottom: 0.75rem;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
+  line-height: 1.4;
 }
 
 .zanr-timeline {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 0.85rem;
 }
 
 .zanr-item {
-  padding: 0.5rem;
-  background: white;
-  border-left: 3px solid #007bff;
-  border-radius: 0 4px 4px 0;
-  font-size: 0.85rem;
+  padding: 0.75rem 1rem;
+  background: #f8f9fa;
+  border-left: 4px solid #4d4dff;
+  border-radius: 0 8px 8px 0;
+  font-size: 0.9rem;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.zanr-item:hover {
+  transform: translateX(5px);
+  background: #edf0f5;
 }
 
 .zanr-god {
-  font-weight: bold;
-  color: #333;
+  font-weight: 700;
+  color: #2f3542;
   margin-right: 0.5rem;
 }
 
-/*---footer---*/ 
+/*---footer (Netaknuto)---*/ 
 .podnozje {
-    background-color: #121214; 
+    background-color: #121214;
     color: #e0e0e0; 
     padding: 60px 20px 20px 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     border-top: 2px solid #2a2a30;
 }
 
- 
 .podnozje-sadrzaj {
     max-width: 1200px;
     margin: 0 auto;
@@ -553,7 +604,6 @@
     font-size: 14px;
 }
 
- 
 .podnozje-nav h4, 
 .podnozje-autori h4 {
     color: #ffffff;
@@ -565,7 +615,6 @@
     padding-bottom: 5px;
 }
 
- 
 .podnozje-nav h4::after, 
 .podnozje-autori h4::after {
     content: '';
@@ -598,7 +647,6 @@
     transition: color 0.3s ease, padding-left 0.3s ease;
 }
 
- 
 .podnozje-nav ul li a:hover {
     color: #ffffff;
     padding-left: 5px;
@@ -644,7 +692,63 @@
     }
 }
 
+/* ----TAMNA TEMA (DARK MODE)----*/
 
+body.tamni-mod {
+  background-color: #18181c;
+  color: #eef2f5;
+}
+
+body.tamni-mod .zaglavlje, 
+body.tamni-mod .sekundarna-nav, 
+body.tamni-mod .aside-blok, 
+body.tamni-mod .kartica {
+  background-color: #212126;
+  border-color: #2c2c35;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+body.tamni-mod .logo-tekst, 
+body.tamni-mod .glavni-meni a,
+body.tamni-mod .sekundarna-nav h3, 
+body.tamni-mod .aside-blok h3,
+body.tamni-mod .kartica h3,
+body.tamni-mod .zanr-god,
+body.tamni-mod .kartice-zaglavlje h2,
+body.tamni-mod .kartice-zaglavlje p {
+  color: #ffffff;
+}
+
+body.tamni-mod .kartica p,
+body.tamni-mod .zanimljivosti-lista li,
+body.tamni-mod .kartica-meta {
+  color: #a0a0b5;
+}
+
+body.tamni-mod .filter-btn,
+body.tamni-mod .zanr-item,
+body.tamni-mod .btn-kartica {
+  background-color: #2c2c35;
+  color: #eef2f5;
+}
+
+body.tamni-mod .filter-btn:hover,
+body.tamni-mod .zanr-item:hover,
+body.tamni-mod .btn-kartica:hover {
+  background-color: #4d4dff;
+  color: #ffffff;
+}
+
+body.tamni-mod #dark-mode-toggle {
+  background-color: #2c2c35;
+  color: #eef2f5;
+}
+
+body.tamni-mod #dark-mode-toggle:hover {
+  background-color: #4d4dff;
+  color: #ffffff;
+}
+ 
 /*---Bendovi(sadrzaj) stranica---*/
 
 /* --- zaglavlje --- */
