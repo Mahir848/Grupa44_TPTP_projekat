@@ -5,8 +5,7 @@ FET Tuzla | vanr.prof.dr. Samra Mujačić | 2025/2026
 ## O projektu
 SoundArhive je moderna web enciklopedija i detaljan katalog bendova, posvećen očuvanju historije i bogate diskografije prvenstveno rock i pop muzike.Platforma posjetiteljima pruža  uvid u muzičko naslijeđe kultnih izvođača, prateći njihov razvoj i najznačajnija izdanja.Kroz ovaj pažljivo kreirani digitalni arhiv, ljubitelji muzike mogu istraživati svoje omiljene grupe .
 ## Članovi grupe
-| Ime i prezime | GitHub | Zaduzenje |
-| Mahir Suljkanovic | @mahir848 | HTML + struktura |
+ | Mahir Suljkanovic | @mahir848 | HTML + struktura |
 | Leo Andric | @LA1-cyber | CSS + dizajn |
 | Lejla Softic | @lejlasofticc | JavaScript |
 ## Tehnologije
