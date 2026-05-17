@@ -146,7 +146,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(rgba(5, 5, 10, 0.7), rgba(5, 5, 10, 0.85)), url('images/hero4.jpg'); 
+  background: linear-gradient(rgba(5, 5, 10, 0.7), rgba(5, 5, 10, 0.85)), url('../images/hero4.jpg'); 
   background-repeat: no-repeat; 
   background-position: center; 
   background-size: cover;
@@ -988,11 +988,11 @@ body {
   animation: zoomInBg 2s ease-out forwards;
 }
 
-.queen-hero::before { background-image: url('images/queen1.jpg'); }
-.nirvana-hero::before { background-image: url('images/nirvana1.jpg'); }
-.zeppelin-hero::before { background-image: url('images/ledzeppelin1.jpg'); }
-.metallica-hero::before { background-image: url('images/metallica1.jpg'); }
-.fleetwood-hero::before { background-image: url('images/fleetwoodmac1.jpg'); }
+.queen-hero::before { background-image: url('../images/queen1.jpg'); }
+.nirvana-hero::before { background-image: url('../images/nirvana1.jpg'); }
+.zeppelin-hero::before { background-image: url('../images/ledzeppelin1.jpg'); }
+.metallica-hero::before { background-image: url('../images/metallica1.jpg'); }
+.fleetwood-hero::before { background-image: url('../images/fleetwoodmac1.jpg'); }
 
 .bend-hero-tekst {
   z-index: 1;  
@@ -1490,7 +1490,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(rgba(5, 5, 10, 0.8), rgba(5, 5, 10, 0.95)), url('images/herok3.jpg') center/cover no-repeat;
+  background: linear-gradient(rgba(5, 5, 10, 0.8), rgba(5, 5, 10, 0.95)), url('../images/herok3.jpg') center/cover no-repeat;
   filter: blur(2px);
   z-index: -1;
   animation: zoomInBg 3s ease-out forwards;
