@@ -1,7 +1,6 @@
 "use strict";
 
 const body = document.body;
-
 const darkModeBtn = document.getElementById("dark-mode-toggle");
 
 const filterButtons = document.querySelectorAll(".filter-btn");
@@ -25,32 +24,27 @@ const brojacPoruke = document.getElementById("poruka-brojac");
    ========================================================= */
 
 function inicijalizujTemu() {
+  const sacuvanaTema = localStorage.getItem("soundarchive-tema");
 
-    const sacuvanaTema = localStorage.getItem("soundarchive-tema");
-
-    if (sacuvanaTema === "dark") {
-        body.classList.add("dark-mode");
-    }
+  if (sacuvanaTema === "dark") {
+    body.classList.add("tamni-mod");
+  }
 }
 
 function promijeniTemu() {
+  body.classList.toggle("tamni-mod");
 
-    body.classList.toggle("dark-mode");
-
-    if (body.classList.contains("dark-mode")) {
-        localStorage.setItem("soundarchive-tema", "dark");
-    } else {
-        localStorage.setItem("soundarchive-tema", "light");
-    }
+  if (body.classList.contains("tamni-mod")) {
+    localStorage.setItem("soundarchive-tema", "dark");
+  } else {
+    localStorage.setItem("soundarchive-tema", "light");
+  }
 }
 
 if (darkModeBtn) {
-
-    inicijalizujTemu();
-
-    darkModeBtn.addEventListener("click", promijeniTemu);
+  inicijalizujTemu();
+  darkModeBtn.addEventListener("click", promijeniTemu);
 }
-
 
 /* =========================================================
    FILTRIRANJE KARTICA
