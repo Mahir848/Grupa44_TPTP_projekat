@@ -3,6 +3,7 @@
 /*----pocetna stranca----*/
 
 * ---- Zaglavlje  --- */
+
 .zaglavlje {
   display: flex;
   flex-wrap: wrap; 
