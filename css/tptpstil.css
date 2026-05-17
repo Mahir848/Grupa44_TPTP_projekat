@@ -143,7 +143,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(rgba(5, 5, 10, 0.7), rgba(5, 5, 10, 0.85)), url('logo/hero4.jpg'); 
+  background: linear-gradient(rgba(5, 5, 10, 0.7), rgba(5, 5, 10, 0.85)), url('images/hero4.jpg'); 
   background-repeat: no-repeat; 
   background-position: center; 
   background-size: cover; 
@@ -293,7 +293,7 @@
     grid-template-columns: 250px 1fr 300px;
     column-gap: 2rem;
     padding: 2rem;
-    align-items: start; /* Sprječava sekcije da se rastežu do dna */
+    align-items: start; 
   }
 }
 
@@ -873,7 +873,6 @@ body {
 .bend-hero::before {
   content: "";
   position: absolute;
-  /* Prošireno van granica da blur ne bi posvijetlio ivice */
   top: -15px; left: -15px; right: -15px; bottom: -15px;
   background-size: cover; 
   background-position: center; 
@@ -884,14 +883,14 @@ body {
 }
 
 
-.queen-hero::before { background-image: url('logo/queen.jpg'); }
-.nirvana-hero::before { background-image: url('logo/nirvana.jpg'); }
-.zeppelin-hero::before { background-image: url('logo/ledzepprlin.jpg'); }
-.metallica-hero::before { background-image: url('logo/metalica1.jpg'); }
-.fleetwood-hero::before { background-image: url('logo/fleetwoodmac.jpg'); }
+.queen-hero::before { background-image: url('images/queen1.jpg'); }
+.nirvana-hero::before { background-image: url('images/nirvana1.jpg'); }
+.zeppelin-hero::before { background-image: url('images/ledzeppelin1.jpg'); }
+.metallica-hero::before { background-image: url('images/metallica1.jpg'); }
+.fleetwood-hero::before { background-image: url('images/fleetwoodmac1.jpg'); }
 
 .bend-hero-tekst {
-  z-index: 1; /* Pozicionirano iznad blura */
+  z-index: 1;  
   max-width: 800px;
   padding: 2rem;
 }
@@ -1400,7 +1399,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;  
-  background: linear-gradient(rgba(5, 5, 10, 0.7), rgba(5, 5, 10, 0.85)), url('logo/herok3.jpg') center/cover no-repeat; 
+  background: linear-gradient(rgba(5, 5, 10, 0.7), rgba(5, 5, 10, 0.85)), url('images/herok3.jpg') center/cover no-repeat; 
   filter: blur(1px); 
   z-index: -1; 
   animation: zoomInBg 2s ease-out forwards;
@@ -1467,7 +1466,7 @@ body {
   color: #ffffff;
 }
 
-/* Efekat za outline tekst (ako odlučiš ubaciti <em> unutar h1) */
+ 
 .kontakt-hero-sadrzaj h1 em {
   font-style: normal;
   color: transparent;
