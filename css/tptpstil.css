@@ -771,7 +771,7 @@ body.tamni-mod #dark-mode-toggle:hover {
   --border-color: #e0e0e0;
   
   --transition-speed: 0.3s;
-}
+
 
 body.tamni-mod {
   --primary-color: #1a1a1a;
@@ -783,6 +783,7 @@ body.tamni-mod {
   --text-muted: #a0a0a5;
   --border-color: #3a3a42;
 }
+
 
 * {
   box-sizing: border-box;
